@@ -18,21 +18,27 @@ namespace Coins
       int total = _amount;
       if(total >= 25)
       {
-        int quarters = total/25;
+        int maxQuarters = total/25;
+        Random amountQuarters = new Random();
+        int quarters = amountQuarters.Next(1, maxQuarters);
         string stringQuarters = quarters.ToString() + " quarters";
         _coinNames.Add(stringQuarters);
         total = total - (quarters * 25);
       }
       if(total >= 10)
       {
-        int dimes = total/10;
+        int maxDimes = total/10;
+        Random amountDimes = new Random();
+        int dimes = amountDimes.Next(1, maxDimes);
         string stringDimes = dimes.ToString() + " dimes";
         _coinNames.Add(stringDimes);
         total = total - (dimes * 10);
       }
       if(total >= 5)
       {
-        int nickels = total/5;
+        int maxNickels = total/5;
+        Random amountNickels = new Random();
+        int nickels = amountNickels.Next(1, maxNickels);
         string stringNickels = nickels.ToString() + " nickels";
         _coinNames.Add(stringNickels);
         total = total - (nickels * 5);
