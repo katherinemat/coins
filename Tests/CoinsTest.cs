@@ -13,7 +13,7 @@ namespace Coins
       int userInput02 = 81;
       Coins newCoins = new Coins(userInput02);
       List<string> change = newCoins.Change();
-      List<string> check = new List<string> { "3" };
+      List<string> check = new List<string> { "3 quarters", "1 nickels", "1 pennies" };
 
       Assert.Equal(check, change);
     }
